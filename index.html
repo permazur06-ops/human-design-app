@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Votre BodyGraph — Permazur</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<main class="page">
+  <header class="topbar">
+    <div class="brand">✧ <span>PERMAZUR</span></div>
+    <div class="title"><small>HUMAN DESIGN</small><h1>Votre <em>BodyGraph</em></h1></div>
+  </header>
+
+  <section class="app-grid">
+    <aside class="form-panel card">
+      <h2>Vos informations</h2>
+      <form id="chart-form">
+        <label>Prénom <small>(facultatif)</small><input id="name" type="text" placeholder="Aurélie"></label>
+        <label>Date de naissance<input id="birth-date" type="date" required></label>
+        <label>Heure exacte de naissance<input id="birth-time" type="time" required></label>
+        <label>Lieu de naissance<input id="city" type="text" required placeholder="Saint-Claude, Guadeloupe"></label>
+        <button id="submit-button" type="submit">Générer mon BodyGraph</button>
+      </form>
+      <div id="status" class="status"></div>
+      <div class="privacy">🔒 <span>Vos données restent privées.<br>Aucune interprétation n’est générée sur cette page.</span></div>
+    </aside>
+
+    <section class="chart-card card">
+      <div id="empty-state" class="empty-state">◇<span>Votre BodyGraph apparaîtra ici.</span></div>
+
+      <div id="results" class="results hidden">
+        <div class="activation-column design-column">
+          <h3>Inconscient</h3>
+          <div id="design-list"></div>
+        </div>
+
+        <div class="bodygraph-column">
+          <div class="variables">
+            <div class="design-variable"><b>←</b><span id="design-vars">—</span></div>
+            <div class="personality-variable"><span id="personality-vars">—</span><b>→</b></div>
+          </div>
+          <svg id="bodygraph" viewBox="0 0 520 760" aria-label="BodyGraph Human Design"></svg>
+        </div>
+
+        <div class="activation-column personality-column">
+          <h3>Conscient</h3>
+          <div id="personality-list"></div>
+        </div>
+      </div>
+    </section>
+
+    <aside id="info-panel" class="info-panel card hidden">
+      <dl>
+        <div><dt>Prénom</dt><dd id="info-name">—</dd></div>
+        <div><dt>Date de naissance</dt><dd id="info-birth">—</dd></div>
+        <div><dt>Lieu de naissance</dt><dd id="info-place">—</dd></div>
+        <div><dt>Date du Design</dt><dd id="info-design-date">—</dd></div>
+        <hr>
+        <div><dt>Type</dt><dd id="info-type">—</dd></div>
+        <div><dt>Stratégie</dt><dd id="info-strategy">—</dd></div>
+        <div><dt>Autorité intérieure</dt><dd id="info-authority">—</dd></div>
+        <div><dt>Définition</dt><dd id="info-definition">—</dd></div>
+        <div><dt>Profil</dt><dd id="info-profile">—</dd></div>
+      </dl>
+    </aside>
+  </section>
+</main>
+<script src="/static/app.js"></script>
+</body>
+</html>

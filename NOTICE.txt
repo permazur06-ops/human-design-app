@@ -1,0 +1,10 @@
+NOTICE
+
+Cette application a été construite comme une implémentation indépendante à partir de principes publics du système Human Design et de calculs astronomiques via Swiss Ephemeris.
+
+Le projet initial exploré pendant le prototypage était :
+human-design-py — https://github.com/geodetheseeker/human-design-py — annoncé sous licence MIT.
+
+Cette version a été réécrite pour Permazur et inclut notamment une liste complète des 36 canaux, une interface originale et un rendu SVG original du BodyGraph.
+
+Human Design est une marque/système associé à ses ayants droit. Vérifier les droits de marque et d'usage commercial avant une communication publique à grande échelle.
